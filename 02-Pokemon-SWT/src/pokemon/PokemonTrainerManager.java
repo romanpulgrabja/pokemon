@@ -15,6 +15,7 @@ public class PokemonTrainerManager {
 
 	/**
 	 *List of Trainers. 
+	 *
 	 **/
 	private static List<Trainer> trainers = new ArrayList<Trainer>();
 
