@@ -2,8 +2,8 @@ package pokemon_2;
 
 public class Competition extends Swap {
 
-	public Competition(Trainer trianera, Pokemon pokemona, Trainer trianerb, Pokemon pokemonb){
-		super(trianera, pokemona, trianerb, pokemonb);
+	public Competition(Pokemon pokemona, Pokemon pokemonb){
+		super(pokemona, pokemonb);
 	}
 	
 	@Override

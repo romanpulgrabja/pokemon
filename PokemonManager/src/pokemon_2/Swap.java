@@ -31,21 +31,26 @@ public class Swap {
 	}
 	
 	public void execute(){
-		if(this.pokemon1.getType() != this.pokemon2.getType()){
-			if(this.pokemon1.getSwapStatus() == true && this.pokemon2.getSwapStatus() == true){
-				Pokemon poke1 = this.trainer1.getPokemon(this.pokemon1);//get Pokemon entfernt das Pokemon aus der Pokemonlist des Trainers
-				Pokemon poke2 = this.trainer2.getPokemon(this.pokemon2);
-				this.trainer1.setPokemon(poke2);
-				this.trainer2.setPokemon(poke1);
-				poke1.setSwap(this);
-				poke2.setSwap(this);
+		if(this.trainer1 != this.trainer2){
+			if(this.pokemon1.getType() != this.pokemon2.getType()){
+				if(this.pokemon1.getSwapStatus() == true && this.pokemon2.getSwapStatus() == true){
+					Pokemon poke1 = this.trainer1.getPokemon(this.pokemon1);//get Pokemon entfernt das Pokemon aus der Pokemonlist des Trainers
+					Pokemon poke2 = this.trainer2.getPokemon(this.pokemon2);
+					this.trainer1.setPokemon(poke2);
+					this.trainer2.setPokemon(poke1);
+					poke1.setSwap(this);
+					poke2.setSwap(this);
+				}
+				else{
+					System.err.println("One of the trainers doesn't allow the swap!");
+				}
 			}
 			else{
-				System.err.println("One of the trainers doesn't allow the swap!");
+				System.err.println("This Pokemon cannot be swapped, as they are of the same type!");
 			}
 		}
 		else{
-			System.err.println("This Pokemon cannot be swapped, as they are of the same type!");
+			System.err.println("A trainer can't swap a pokemon with himself!");
 		}
 	}
 	
