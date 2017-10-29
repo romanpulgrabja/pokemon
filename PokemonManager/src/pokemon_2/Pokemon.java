@@ -9,10 +9,12 @@ public class Pokemon {
 	private Type type;
 	private Trainer trainer;
 	private int number;
+	private double power;
 	private static int nextnumber;
 	private boolean hastrainer;
 	private boolean swapAllow;
 	private List<Swap> swaps = new ArrayList<Swap>();
+	private List<Competition> competitions = new ArrayList<Competition>();
 	
 	
 	public Pokemon(String name, Type type){
@@ -91,6 +93,17 @@ public class Pokemon {
 		this.swaps.add(newSwap);
 	}
 	
+	public void setCompetitions(Competition newcomp){
+		this.competitions.add(newcomp);
+	}
+	
+	public void setPower(double newPower){
+		this.power = newPower;
+	}
+	
+	public double getPower(){
+		return this.power;
+	}
 	
 	@Override
 	public String toString() {

@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class Swap {
 
-	private String ID;
-	private Date date;
-	private Trainer trainer1;
-	private Trainer trainer2;
-	private Pokemon pokemon1;
-	private Pokemon pokemon2;
+	protected String ID;
+	protected Date date;
+	protected Trainer trainer1;
+	protected Trainer trainer2;
+	protected Pokemon pokemon1;
+	protected Pokemon pokemon2;
 	
 	public Swap(Pokemon pokemona, Pokemon pokemonb){
 		this.trainer1 = pokemona.getTrainer();
@@ -51,7 +51,7 @@ public class Swap {
 			if(this.pokemon1.getType() != this.pokemon2.getType()){
 				*//**
 				 * Es was auch eingentlich in der Aufgabe so beschrieben, dass man gleichzeitig trainer und type mit
-				 * nur einem "else" abfängt. If würde zuerst abfragen ob "getSwapStatus" wahr ist und dann type und trainer
+				 * nur einem "else" abfï¿½ngt. If wï¿½rde zuerst abfragen ob "getSwapStatus" wahr ist und dann type und trainer
 				 * gleichzeitig in einem "if" abfangen um die Anforderungen genau zu implementieren.
 				 *//*
 				if(this.pokemon1.getSwapStatus() == true && this.pokemon2.getSwapStatus() == true){ 

@@ -19,10 +19,11 @@ public class PokemonManager {
 		Trainer Ash;
 		Ash = new Trainer("Ash", "Katchum");
 		Trainer Roman = new Trainer("Roman", "Pulgrabja");
-		Pokemon Glumanda = new Pokemon("Glumande", Type.Fire);
+		Pokemon Glumanda = new Pokemon("Glumanda", Type.Fire);
 		Pokemon Shiggy = new Pokemon("Shiggy", Type.Water);
 		Pokemon Sleima = new Pokemon("Sleima", Type.Poison);
 		Pokemon Sleimog = new Pokemon("Sleimog", Type.Poison);
+		/*
 		Roman.setPokemon(Glumanda);
 		Roman.setPokemon(Sleima);
 		System.out.println(Roman);
@@ -41,5 +42,13 @@ public class PokemonManager {
 		sw3.execute();
 		Swap sw4 = new Swap(Sleima, Glumanda);
 		sw4.execute();
+		*/
+		Roman.setPokemon(Shiggy);
+		Ash.setPokemon(Glumanda);
+		Roman.setPokemon(Sleimog);
+		Competition comp = new Competition(Shiggy, Glumanda);
+		comp.execute();
+		Competition comp2 = new Competition(Glumanda, Sleimog);
+		comp2.execute();
 	}
 }

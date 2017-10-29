@@ -8,7 +8,7 @@ public class Trainer {
 	
 	private String firstname;
 	private String lastname;
-	private Pokemon pokemon;
+	//private Pokemon pokemon;
 	private ArrayList<Pokemon> pokemonlist;
 	
 	public Trainer(String firstname, String lastname){
@@ -36,13 +36,13 @@ public class Trainer {
 	}
 	
 	/**Eigentlich sollte eine Methode nicht gleichzeitig zwei sachen machen.
-	 * Da der name "getPokemon" darauf hinweist, dass man etwas zurückbekommt und nicht etwas löscht.
-	 * Hierfür sollte man eine Methode "removePokemon" implementiereun und die in der "execute"-Methode dann aufrufen.
+	 * Da der name "getPokemon" darauf hinweist, dass man etwas zurï¿½ckbekommt und nicht etwas lï¿½scht.
+	 * Hierfï¿½r sollte man eine Methode "removePokemon" implementiereun und die in der "execute"-Methode dann aufrufen.
 	 * 
 	*/
 	public Pokemon getPokemon(Pokemon pokemon) {
-		//this.pokemonlist.remove(pokemon);
-		//pokemon.removeTrainer();
+		this.pokemonlist.remove(pokemon);
+		pokemon.removeTrainer();
 		return pokemon;
 	}
 	
