@@ -32,7 +32,14 @@ public class PokemonManager {
 		Roman.setPokemon(Sleimog);
 		Roman.allPoison();
 		Roman.allPokemon();
-		Swap sw = new Swap(Shiggy, Sleima);
-		sw.execute();
+		Swap sw1 = new Swap(Shiggy, Sleima);
+		sw1.execute();
+		Shiggy.setSwapStatus(false);
+		Swap sw2 = new Swap(Shiggy, Sleima);
+		sw2.execute();
+		Swap sw3 = new Swap(Sleima, Sleimog);
+		sw3.execute();
+		Swap sw4 = new Swap(Sleima, Glumanda);
+		sw4.execute();
 	}
 }

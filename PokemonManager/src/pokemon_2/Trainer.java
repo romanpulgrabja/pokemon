@@ -92,6 +92,8 @@ public class Trainer {
 		}
 		return indexPokemon;
 	}
+	
+	
 
 	@Override
 	public String toString() {

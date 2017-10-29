@@ -1,5 +1,6 @@
 package pokemon_2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pokemon {
@@ -11,7 +12,7 @@ public class Pokemon {
 	private static int nextnumber;
 	private boolean hastrainer;
 	private boolean swapAllow;
-	private List<Swap> swaps;
+	private List<Swap> swaps = new ArrayList<Swap>();
 	
 	
 	public Pokemon(String name, Type type){
@@ -19,7 +20,8 @@ public class Pokemon {
 		this.type = type;
 		this.number = nextnumber;
 		nextnumber++;	
-		this.swapAllow = false;
+		this.swapAllow = true;
+		
 	}
 
 
