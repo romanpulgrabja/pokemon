@@ -32,9 +32,29 @@ public class Swap {
 	}
 	
 	public void execute(){
-		if(this.trainer1 != this.trainer2){
+		if(this.pokemon1.getSwapStatus() && this.pokemon2.getSwapStatus()) {
+			if(this.pokemon1.getType() != this.pokemon2.getType() && this.trainer1 != this.trainer2) {
+				Pokemon poke1 = this.trainer1.getPokemon(this.pokemon1);//get Pokemon entfernt das Pokemon aus der Pokemonlist des Trainers
+				Pokemon poke2 = this.trainer2.getPokemon(this.pokemon2);
+				this.trainer1.setPokemon(poke2);
+				this.trainer2.setPokemon(poke1);
+				poke1.setSwap(this);
+				poke2.setSwap(this);
+			} else {
+				System.err.println("The pokemons " + pokemon1.getName() + " and " + pokemon2.getName() + " are of the same type and/or have the same trainer and cannot be swapped!");
+			}
+		} else {
+			System.out.print("The pokemon cannot be swapped!");
+		}
+		
+/*		if(this.trainer1 != this.trainer2){
 			if(this.pokemon1.getType() != this.pokemon2.getType()){
-				if(this.pokemon1.getSwapStatus() == true && this.pokemon2.getSwapStatus() == true){
+				*//**
+				 * Es was auch eingentlich in der Aufgabe so beschrieben, dass man gleichzeitig trainer und type mit
+				 * nur einem "else" abfängt. If würde zuerst abfragen ob "getSwapStatus" wahr ist und dann type und trainer
+				 * gleichzeitig in einem "if" abfangen um die Anforderungen genau zu implementieren.
+				 *//*
+				if(this.pokemon1.getSwapStatus() == true && this.pokemon2.getSwapStatus() == true){ 
 					Pokemon poke1 = this.trainer1.getPokemon(this.pokemon1);//get Pokemon entfernt das Pokemon aus der Pokemonlist des Trainers
 					Pokemon poke2 = this.trainer2.getPokemon(this.pokemon2);
 					this.trainer1.setPokemon(poke2);
@@ -52,7 +72,7 @@ public class Swap {
 		}
 		else{
 			System.err.println("A trainer can't swap a pokemon with himself!");
-		}
+		}*/
 	}
 	
 	@Override
