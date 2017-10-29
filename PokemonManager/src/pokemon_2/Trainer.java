@@ -43,8 +43,9 @@ public class Trainer {
 
 	public void setPokemon(Pokemon pokemon) {
 		if(pokemon.getHasTrainer() == false){
-			this.pokemon = pokemon;
-			pokemon.setHasTrainer(true);
+			//this.pokemon = pokemon;
+			pokemon.setTrainer(this);
+			this.pokemonlist.add(pokemon);
 		}
 		else{
 			System.out.println("Das Pokemon hat bereits einen Trainer");

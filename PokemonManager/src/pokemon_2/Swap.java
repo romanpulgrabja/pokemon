@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Swap {
 
-	private static String ID;
+	private String ID;
 	private Date date;
 	private Trainer trainer1;
 	private Trainer trainer2;
@@ -16,8 +16,9 @@ public class Swap {
 		this.trainer2 = pokemonb.getTrainer();
 		this.pokemon1 = pokemona;
 		this.pokemon2 = pokemonb;
-		this.ID = this.setID();
 		this.date = this.setDate();
+		this.ID = this.setID();
+		
 	}
 	
 	public String setID(){

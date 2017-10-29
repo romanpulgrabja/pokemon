@@ -23,14 +23,16 @@ public class PokemonManager {
 		Pokemon Shiggy = new Pokemon("Shiggy", Type.Water);
 		Pokemon Sleima = new Pokemon("Sleima", Type.Poison);
 		Pokemon Sleimog = new Pokemon("Sleimog", Type.Poison);
-		Roman.addPokemon(Glumanda);
-		Roman.addPokemon(Sleima);
+		Roman.setPokemon(Glumanda);
+		Roman.setPokemon(Sleima);
 		System.out.println(Roman);
-		Ash.addPokemon(Shiggy);
-		Ash.addPokemon(Glumanda);
+		Ash.setPokemon(Shiggy);
+		Ash.setPokemon(Glumanda);
 		System.out.println(Ash);
-		Roman.addPokemon(Sleimog);
+		Roman.setPokemon(Sleimog);
 		Roman.allPoison();
 		Roman.allPokemon();
+		Swap sw = new Swap(Shiggy, Sleima);
+		sw.execute();
 	}
 }
