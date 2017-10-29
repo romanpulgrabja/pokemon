@@ -34,11 +34,21 @@ public class Trainer {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-
+	
+	/**Eigentlich sollte eine Methode nicht gleichzeitig zwei sachen machen.
+	 * Da der name "getPokemon" darauf hinweist, dass man etwas zurückbekommt und nicht etwas löscht.
+	 * Hierfür sollte man eine Methode "removePokemon" implementiereun und die in der "execute"-Methode dann aufrufen.
+	 * 
+	*/
 	public Pokemon getPokemon(Pokemon pokemon) {
+		//this.pokemonlist.remove(pokemon);
+		//pokemon.removeTrainer();
+		return pokemon;
+	}
+	
+	public void removePokemon(Pokemon pokemon) {
 		this.pokemonlist.remove(pokemon);
 		pokemon.removeTrainer();
-		return pokemon;
 	}
 
 	public void setPokemon(Pokemon pokemon) {
